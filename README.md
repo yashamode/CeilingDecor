@@ -1,0 +1,1 @@
+A Ceiling decor Prototype.
