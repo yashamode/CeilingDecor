@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ceiling Decor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left panel -->
+            <div class="col-2 left bg-info vh-100 overflow-auto">
+                <div class="row ms-2 mt-2">
+                    <!-- Color picker -->
+                    <div class="d-flex">
+                        <h3 class="text-white">Ceiling Color:</h3> 
+                        <input type="color" class="form-control form-control-color ms-2" id="ceilingColorPicker" value="#ffffff" title="Choose your color">
+                    </div>
+                </div>
+
+                <select id="room-picker" class="custom-dropdown mt-3 mb-1">
+                    <option value="" disabled selected>Select Room Type</option>
+                    <option value="rectangular">Rectangular</option>
+                    <option value="square">Square</option>
+                </select>
+                
+                <!--Design Selection-->
+                <div id="ceiling-templates" class="row mt-4 ms-3">
+                    <h3 class="text-white">Ceiling Templates</h3> 
+                    <!-- Rectangular Ceiling 1 -->
+                    <div class="col mt-4 ceiling-card" data-room-type="rectangular">
+                        <div class="card" style="width: 13rem;">
+                            <img class="card-img-top pt-1 img-fluid mx-auto" src="./assets/RectangularCeiling.png" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <a href="#" class="btn btn-primary" data-design="./glbs/falseCeiling4.glb" room-type="Rectangle">Rectangular Ceiling1</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Rectangular Ceiling 2 -->
+                    <div class="col mt-4 ceiling-card" data-room-type="rectangular">
+                        <div class="card" style="width: 13rem;">
+                            <img class="card-img-top pt-1 img-fluid mx-auto" src="./assets/RectangularCeiling2.png" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <a href="#" class="btn btn-primary" data-design="./glbs/falseCeiling3.glb" room-type="Rectangle">Rectangular Ceiling2</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Rectangular Ceiling 3 -->
+                    <div class="col mt-4 ceiling-card" data-room-type="rectangular">
+                        <div class="card" style="width: 13rem;">
+                            <img class="card-img-top pt-1 img-fluid mx-auto" src="./assets/RectangularCeiling3.png" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <a href="#" class="btn btn-primary" data-design="./glbs/falseCeiling2.glb" room-type="Rectangle">Rectangular Ceiling3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Square Ceiling 1 -->
+                    <div class="col mt-4 ceiling-card" data-room-type="square">
+                        <div class="card" style="width: 13rem;">
+                            <img class="card-img-top pt-1 img-fluid mx-auto" src="./assets/SquareCeiling1.PNG" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <a href="#" class="btn btn-primary" data-design="./glbs/squareFalseCeiling2.glb" room-type="Square">Square Ceiling1</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Square Ceiling 2 -->
+                    <div class="col mt-4 ceiling-card" data-room-type="square">
+                        <div class="card" style="width: 13rem;">
+                            <img class="card-img-top pt-1 img-fluid mx-auto" src="./assets/SquareCeiling2.PNG" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <a href="#" class="btn btn-primary" data-design="./glbs/squareFalseCeiling1.glb" room-type="Square">Square Ceiling2</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Square Ceiling 3 -->
+                    <div class="col mt-4 ceiling-card" data-room-type="square">
+                        <div class="card" style="width: 13rem;">
+                            <img class="card-img-top pt-1 img-fluid mx-auto" src="./assets/SquareCeiling3.PNG" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <a href="#" class="btn btn-primary" data-design="./glbs/squareFalseCeiling3.glb" room-type="Square">Square Ceiling3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- canvas -->
+            <div class="col-auto right">
+
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <div class="left">
+            <input type="color" id="color-picker" value="#aaaaaa" />
+            <select id="room-picker">
+                <option value="rectangular">Rectangular Room</option>
+                <option value="square">Square Room</option>
+            </select>
+            <div>
+            <div class="card">
+                <img src="./assets/SquareCeiling1.PNG" alt="">
+                <button id="">Design 1</button>
+            </div>
+            </div>
+        </div>
+        <div class="right">
+    
+        </div> -->
+    </div>
+
+
+
+    <!-- <select id="design-picker">
+        <option value="./glbs/falseCeiling2.glb">Design 1</option>
+        <option value="./glbs/falseCeiling3.glb">Design 2</option>
+        <option value="./glbs/falseCeiling4.glb">Design 3</option>
+    </select> -->
+   
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

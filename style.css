@@ -1,0 +1,79 @@
+/* body {
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(117, 94, 124);
+}
+canvas {
+    /* display: block; */
+    /* position: absolute;
+    left: 15%;
+}
+#color-picker, #design-picker, #room-picker {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    margin-bottom: 10px;
+}
+#design-picker {
+    top: 60px;
+}
+#room-picker {
+    top: 100px;
+} */
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+
+}
+
+.left {
+    margin-right: 1rem;
+}
+
+.card {
+    width: 20rem;
+    background: red;
+}
+
+.card img {
+    width: 80%;
+}
+
+h2{
+    color: white;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.custom-dropdown {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.custom-dropdown:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none;
+}
+
+.custom-dropdown option {
+    padding: 10px;
+}
+
